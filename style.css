@@ -22,3 +22,44 @@ body {
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.6;
 }
+
+/* =========================================
+   02 — NAVIGATION
+   ========================================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 6%;
+
+    background-color: #f4f0e8;
+    border-bottom: 1px solid #d8d0c3;
+
+    z-index: 1000;
+}
+
+nav > div:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav > div:last-child {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #24221f;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+

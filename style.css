@@ -1,1 +1,24 @@
+/* =========================================
+   ATHARV TYAGI — PORTFOLIO
+   ========================================= */
 
+
+/* =========================================
+   01 — BASE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f0e8;
+    color: #24221f;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}

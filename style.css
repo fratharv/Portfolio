@@ -63,3 +63,313 @@ nav a {
     letter-spacing: 1.5px;
 }
 
+/* =========================================
+   03 — GENERAL SECTIONS
+   ========================================= */
+
+section {
+    padding: 120px 6%;
+}
+
+section > p:first-child {
+    margin-bottom: 24px;
+
+    color: #756d62;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+h2 {
+    max-width: 700px;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    max-width: 700px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   04 — HERO
+   ========================================= */
+
+#hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+#hero h1 {
+    max-width: 950px;
+
+    margin-bottom: 32px;
+
+    font-size: clamp(52px, 8vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+#hero > p {
+    max-width: 600px;
+}
+
+#hero a {
+    display: inline-block;
+
+    margin-top: 28px;
+
+    color: #24221f;
+    text-decoration: none;
+
+    border-bottom: 1px solid #24221f;
+    padding-bottom: 5px;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   05 — ABOUT
+   ========================================= */
+
+#about p {
+    max-width: 720px;
+}
+
+
+/* =========================================
+   06 — EDUCATION
+   ========================================= */
+
+.education-item {
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 40px 0;
+
+    border-top: 1px solid #d8d0c3;
+}
+
+.education-logo {
+    width: 100px;
+    height: 100px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.education-details h3 {
+    margin-bottom: 8px;
+}
+
+.education-details p {
+    margin-bottom: 4px;
+}
+
+
+/* =========================================
+   07 — WHAT I DO
+   ========================================= */
+
+#what-i-do > div {
+    padding: 32px 0;
+
+    border-top: 1px solid #d8d0c3;
+}
+
+#what-i-do h3 {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   08 — SELECTED WORK
+   ========================================= */
+
+#work > div {
+    padding: 40px 0;
+
+    border-top: 1px solid #d8d0c3;
+}
+
+
+/* =========================================
+   09 — CURRENTLY EXPLORING
+   ========================================= */
+
+#exploring > div {
+    padding: 32px 0;
+
+    border-top: 1px solid #d8d0c3;
+}
+
+
+/* =========================================
+   10 — LEARNING PROGRESS
+   ========================================= */
+
+#learning > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #d8d0c3;
+}
+
+#learning h3 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+#learning p {
+    margin-bottom: 0;
+
+    color: #756d62;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   11 — CONTACT
+   ========================================= */
+
+#contact {
+    padding-bottom: 160px;
+}
+
+#contact a {
+    display: inline-block;
+
+    margin-right: 28px;
+
+    color: #24221f;
+    text-decoration: none;
+
+    border-bottom: 1px solid #24221f;
+    padding-bottom: 4px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   12 — FOOTER
+   ========================================= */
+
+footer {
+    padding: 40px 6%;
+
+    border-top: 1px solid #d8d0c3;
+
+    color: #756d62;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    font-size: 11px;
+}
+
+footer a {
+    margin-right: 20px;
+
+    color: #756d62;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   13 — MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 20px 5%;
+    }
+
+    nav > div:last-child {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 90px 5%;
+    }
+
+    #hero {
+        padding-top: 130px;
+    }
+
+    #hero h1 {
+        font-size: clamp(44px, 14vw, 72px);
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .education-item {
+        gap: 24px;
+    }
+
+    .education-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    #learning > div {
+        gap: 20px;
+    }
+
+    #learning p {
+        text-align: right;
+    }
+
+    #contact a {
+        margin-bottom: 16px;
+    }
+}

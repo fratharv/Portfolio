@@ -17,8 +17,10 @@ html {
 
 body {
     margin: 0;
+
     background-color: #f4f0e8;
     color: #24221f;
+
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.6;
 }
@@ -30,8 +32,10 @@ body {
 
 nav {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
 
     display: flex;
@@ -41,44 +45,55 @@ nav {
     padding: 28px 6%;
 
     background-color: #f4f0e8;
+
     border-bottom: 1px solid #d8d0c3;
 
     z-index: 1000;
 }
 
-nav > div:first-child {
+.nav-name {
     font-size: 14px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
-nav > div:last-child {
+.nav-links {
     display: flex;
+
     gap: 28px;
 }
 
-nav a {
+.nav-links a {
     color: #24221f;
+
     text-decoration: none;
+
     font-size: 12px;
+
     letter-spacing: 1.5px;
 }
 
 
 /* =========================================
-   03 — GENERAL SECTIONS
+   03 — GENERAL TYPOGRAPHY
    ========================================= */
 
 section {
-    padding: 120px 6%;
+    padding: 140px 6%;
 }
 
-section > p:first-child {
-    margin-bottom: 24px;
+.section-label {
+    margin-bottom: 28px;
 
     color: #756d62;
+
     font-size: 11px;
-    letter-spacing: 2px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
 }
 
 h1,
@@ -95,17 +110,26 @@ h3 {
 }
 
 h2 {
-    max-width: 700px;
-    font-size: 48px;
-    line-height: 1.1;
+    max-width: 800px;
+
+    margin-bottom: 70px;
+
+    font-size: clamp(42px, 6vw, 76px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
 }
 
 h3 {
     font-size: 24px;
+
+    line-height: 1.2;
 }
 
 p {
     max-width: 700px;
+
     font-size: 16px;
 }
 
@@ -115,43 +139,81 @@ p {
    ========================================= */
 
 #hero {
-    min-height: 85vh;
+    min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
 
-    padding-top: 140px;
-    padding-bottom: 80px;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    padding-top: 150px;
+
+    padding-bottom: 100px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    margin-bottom: 32px;
+
+    color: #756d62;
+
+    font-size: 11px;
+
+    letter-spacing: 2.5px;
 }
 
 #hero h1 {
-    max-width: 950px;
+    margin-bottom: 40px;
 
-    margin-bottom: 32px;
+    font-size: clamp(52px, 7vw, 110px);
 
-    font-size: clamp(52px, 8vw, 120px);
-    line-height: 0.95;
-    letter-spacing: -3px;
+    line-height: 0.94;
+
+    letter-spacing: -4px;
 }
 
-#hero > p {
-    max-width: 600px;
+.hero-description {
+    max-width: 580px;
+
+    margin-bottom: 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
 }
 
-#hero a {
+.hero-link {
     display: inline-block;
 
-    margin-top: 28px;
+    margin-top: 32px;
 
     color: #24221f;
+
     text-decoration: none;
 
     border-bottom: 1px solid #24221f;
-    padding-bottom: 5px;
+
+    padding-bottom: 6px;
 
     font-size: 12px;
+
     letter-spacing: 1.5px;
+}
+
+.hero-image {
+    width: 100%;
+
+    min-height: 620px;
+
+    border: 1px solid #d8d0c3;
+
+    background-color: #ebe5da;
 }
 
 
@@ -159,8 +221,34 @@ p {
    05 — ABOUT
    ========================================= */
 
-#about p {
-    max-width: 720px;
+#about {
+    border-top: 1px solid #d8d0c3;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+}
+
+.about-title h2 {
+    margin-bottom: 0;
+}
+
+.about-text {
+    padding-top: 8px;
+}
+
+.about-text p {
+    max-width: 650px;
+
+    margin-bottom: 28px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
 }
 
 
@@ -168,347 +256,74 @@ p {
    06 — EDUCATION
    ========================================= */
 
+#education {
+    background-color: #ebe5da;
+}
+
+.education-list {
+    border-top: 1px solid #cfc6b8;
+}
+
 .education-item {
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 50px;
+
     align-items: center;
 
-    gap: 40px;
+    padding: 45px 0;
 
-    padding: 40px 0;
-
-    border-top: 1px solid #d8d0c3;
+    border-bottom: 1px solid #cfc6b8;
 }
 
 .education-logo {
     width: 100px;
+
     height: 100px;
 
-    flex-shrink: 0;
-
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+    border: 1px solid #cfc6b8;
+
+    background-color: #f4f0e8;
 }
 
 .education-logo img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+
+    max-height: 80%;
 }
 
-.education-details h3 {
-    margin-bottom: 8px;
-}
-
-.education-details p {
-    margin-bottom: 4px;
-}
-
-
-/* =========================================
-   07 — WHAT I DO
-   ========================================= */
-
-#what-i-do > div {
-    padding: 32px 0;
-
-    border-top: 1px solid #d8d0c3;
-}
-
-#what-i-do h3 {
-    margin-bottom: 8px;
-}
-
-
-/* =========================================
-   08 — SELECTED WORK
-   ========================================= */
-
-#work > div {
-    padding: 40px 0;
-
-    border-top: 1px solid #d8d0c3;
-}
-
-
-/* =========================================
-   09 — CURRENTLY EXPLORING
-   ========================================= */
-
-#exploring > div {
-    padding: 32px 0;
-
-    border-top: 1px solid #d8d0c3;
-}
-
-
-/* =========================================
-   10 — LEARNING PROGRESS
-   ========================================= */
-
-#learning > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-
-    padding: 20px 0;
-
-    border-top: 1px solid #d8d0c3;
-}
-
-#learning h3 {
-    margin-bottom: 0;
-    font-size: 18px;
-}
-
-#learning p {
-    margin-bottom: 0;
+.education-institution {
+    margin-bottom: 10px;
 
     color: #756d62;
-    font-size: 13px;
-}
 
-
-/* =========================================
-   11 — CONTACT
-   ========================================= */
-
-#contact {
-    padding-bottom: 160px;
-}
-
-#contact a {
-    display: inline-block;
-
-    margin-right: 28px;
-
-    color: #24221f;
-    text-decoration: none;
-
-    border-bottom: 1px solid #24221f;
-    padding-bottom: 4px;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   12 — FOOTER
-   ========================================= */
-
-footer {
-    padding: 40px 6%;
-
-    border-top: 1px solid #d8d0c3;
-
-    color: #756d62;
     font-size: 11px;
-    letter-spacing: 1px;
-}
 
-footer p {
-    margin-bottom: 8px;
-    font-size: 11px;
-}
-
-footer a {
-    margin-right: 20px;
-
-    color: #756d62;
-    text-decoration: none;
-}
-
-
-/* =========================================
-   13 — MOBILE
-   ========================================= */
-
-@media (max-width: 700px) {
-
-    nav {
-        padding: 20px 5%;
-    }
-
-    nav > div:last-child {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 9px;
-        letter-spacing: 1px;
-    }
-
-    section {
-        padding: 90px 5%;
-    }
-
-    #hero {
-        padding-top: 130px;
-    }
-
-    #hero h1 {
-        font-size: clamp(44px, 14vw, 72px);
-        letter-spacing: -2px;
-    }
-
-    h2 {
-        font-size: 38px;
-    }
-
-    .education-item {
-        gap: 24px;
-    }
-
-    .education-logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    #learning > div {
-        gap: 20px;
-    }
-
-    #learning p {
-        text-align: right;
-    }
-
-    #contact a {
-        margin-bottom: 16px;
-    }
-}   03 — GENERAL SECTIONS
-   ========================================= */
-
-section {
-    padding: 120px 6%;
-}
-
-section > p:first-child {
-    margin-bottom: 24px;
-
-    color: #756d62;
-    font-size: 11px;
     letter-spacing: 2px;
 }
 
-h1,
-h2,
-h3,
-p {
-    margin-top: 0;
-}
-
-h1,
-h2,
-h3 {
-    font-weight: normal;
-}
-
-h2 {
-    max-width: 700px;
-    font-size: 48px;
-    line-height: 1.1;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-p {
-    max-width: 700px;
-    font-size: 16px;
-}
-
-
-/* =========================================
-   04 — HERO
-   ========================================= */
-
-#hero {
-    min-height: 85vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding-top: 140px;
-    padding-bottom: 80px;
-}
-
-#hero h1 {
-    max-width: 950px;
-
-    margin-bottom: 32px;
-
-    font-size: clamp(52px, 8vw, 120px);
-    line-height: 0.95;
-    letter-spacing: -3px;
-}
-
-#hero > p {
-    max-width: 600px;
-}
-
-#hero a {
-    display: inline-block;
-
-    margin-top: 28px;
-
-    color: #24221f;
-    text-decoration: none;
-
-    border-bottom: 1px solid #24221f;
-    padding-bottom: 5px;
-
-    font-size: 12px;
-    letter-spacing: 1.5px;
-}
-
-
-/* =========================================
-   05 — ABOUT
-   ========================================= */
-
-#about p {
-    max-width: 720px;
-}
-
-
-/* =========================================
-   06 — EDUCATION
-   ========================================= */
-
-.education-item {
-    display: flex;
-    align-items: center;
-
-    gap: 40px;
-
-    padding: 40px 0;
-
-    border-top: 1px solid #d8d0c3;
-}
-
-.education-logo {
-    width: 100px;
-    height: 100px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.education-logo img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .education-details h3 {
-    margin-bottom: 8px;
+    max-width: 800px;
+
+    margin-bottom: 12px;
+
+    font-size: 30px;
 }
 
-.education-details p {
-    margin-bottom: 4px;
+.education-date {
+    margin-bottom: 0;
+
+    color: #756d62;
+
+    font-size: 13px;
 }
 
 
@@ -516,14 +331,70 @@ p {
    07 — WHAT I DO
    ========================================= */
 
-#what-i-do > div {
-    padding: 32px 0;
+.interest-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
 
     border-top: 1px solid #d8d0c3;
+
+    border-left: 1px solid #d8d0c3;
 }
 
-#what-i-do h3 {
-    margin-bottom: 8px;
+.interest-card {
+    min-height: 480px;
+
+    padding: 36px;
+
+    border-right: 1px solid #d8d0c3;
+
+    border-bottom: 1px solid #d8d0c3;
+}
+
+.interest-graphic {
+    width: 100%;
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #d8d0c3;
+
+    color: #756d62;
+
+    font-size: 64px;
+}
+
+.interest-number {
+    margin-bottom: 20px;
+
+    color: #756d62;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.interest-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+.interest-card p {
+    margin-bottom: 0;
+
+    color: #5e5952;
+
+    font-size: 15px;
+
+    line-height: 1.7;
 }
 
 
@@ -531,10 +402,44 @@ p {
    08 — SELECTED WORK
    ========================================= */
 
-#work > div {
-    padding: 40px 0;
+#work {
+    background-color: #f4f0e8;
+}
 
+.work-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+.work-card {
     border-top: 1px solid #d8d0c3;
+}
+
+.work-image {
+    width: 100%;
+
+    min-height: 420px;
+
+    margin-bottom: 30px;
+
+    background-color: #ebe5da;
+
+    border: 1px solid #d8d0c3;
+}
+
+.work-details h3 {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+.work-details p {
+    margin-bottom: 0;
+
+    color: #756d62;
 }
 
 
@@ -542,10 +447,38 @@ p {
    09 — CURRENTLY EXPLORING
    ========================================= */
 
-#exploring > div {
-    padding: 32px 0;
+#exploring {
+    background-color: #ebe5da;
+}
 
-    border-top: 1px solid #d8d0c3;
+.exploring-list {
+    border-top: 1px solid #cfc6b8;
+}
+
+.exploring-item {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    padding: 38px 0;
+
+    border-bottom: 1px solid #cfc6b8;
+}
+
+.exploring-title {
+    font-size: 22px;
+
+    letter-spacing: 0.5px;
+}
+
+.exploring-description {
+    max-width: 600px;
+
+    color: #5e5952;
+
+    font-size: 16px;
 }
 
 
@@ -553,25 +486,37 @@ p {
    10 — LEARNING PROGRESS
    ========================================= */
 
-#learning > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+.learning-grid {
+    display: grid;
 
-    padding: 20px 0;
+    grid-template-columns: repeat(3, 1fr);
 
     border-top: 1px solid #d8d0c3;
+
+    border-left: 1px solid #d8d0c3;
 }
 
-#learning h3 {
-    margin-bottom: 0;
-    font-size: 18px;
+.learning-item {
+    min-height: 150px;
+
+    padding: 25px 28px;
+
+    border-right: 1px solid #d8d0c3;
+
+    border-bottom: 1px solid #d8d0c3;
 }
 
-#learning p {
+.learning-item h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.learning-item p {
     margin-bottom: 0;
 
     color: #756d62;
+
     font-size: 13px;
 }
 
@@ -581,21 +526,61 @@ p {
    ========================================= */
 
 #contact {
-    padding-bottom: 160px;
+    padding-top: 150px;
+
+    padding-bottom: 170px;
+
+    background-color: #24221f;
+
+    color: #f4f0e8;
 }
 
-#contact a {
-    display: inline-block;
+.contact-inner {
+    max-width: 1200px;
+}
 
-    margin-right: 28px;
+#contact .section-label {
+    color: #b8b0a4;
+}
 
-    color: #24221f;
+#contact h2 {
+    max-width: 900px;
+
+    margin-bottom: 35px;
+
+    font-size: clamp(48px, 7vw, 100px);
+
+    color: #f4f0e8;
+}
+
+#contact p {
+    max-width: 600px;
+
+    color: #b8b0a4;
+
+    font-size: 17px;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 50px;
+}
+
+.contact-links a {
+    color: #f4f0e8;
+
     text-decoration: none;
 
-    border-bottom: 1px solid #24221f;
-    padding-bottom: 4px;
+    border-bottom: 1px solid #756d62;
+
+    padding-bottom: 6px;
 
     font-size: 13px;
+
+    letter-spacing: 1.5px;
 }
 
 
@@ -604,25 +589,29 @@ p {
    ========================================= */
 
 footer {
-    padding: 40px 6%;
+    display: flex;
 
-    border-top: 1px solid #d8d0c3;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 35px 6%;
+
+    background-color: #24221f;
+
+    border-top: 1px solid #3a3732;
 
     color: #756d62;
+
     font-size: 11px;
+
     letter-spacing: 1px;
 }
 
 footer p {
-    margin-bottom: 8px;
+    margin-bottom: 0;
+
     font-size: 11px;
-}
-
-footer a {
-    margin-right: 20px;
-
-    color: #756d62;
-    text-decoration: none;
 }
 
 
@@ -630,56 +619,137 @@ footer a {
    13 — MOBILE
    ========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     nav {
         padding: 20px 5%;
     }
 
-    nav > div:last-child {
+    .nav-links {
         gap: 12px;
     }
 
-    nav a {
+    .nav-links a {
         font-size: 9px;
+
         letter-spacing: 1px;
     }
 
+
     section {
-        padding: 90px 5%;
+        padding: 100px 5%;
     }
 
+
     #hero {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
         padding-top: 130px;
     }
 
     #hero h1 {
-        font-size: clamp(44px, 14vw, 72px);
-        letter-spacing: -2px;
+        font-size: clamp(48px, 13vw, 80px);
+
+        letter-spacing: -3px;
     }
 
-    h2 {
-        font-size: 38px;
+    .hero-image {
+        min-height: 450px;
     }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
 
     .education-item {
-        gap: 24px;
+        grid-template-columns: 80px 1fr;
+
+        gap: 25px;
     }
 
     .education-logo {
-        width: 70px;
-        height: 70px;
+        width: 75px;
+
+        height: 75px;
     }
 
-    #learning > div {
-        gap: 20px;
+    .education-details h3 {
+        font-size: 23px;
     }
 
-    #learning p {
-        text-align: right;
+
+    .interest-grid {
+        grid-template-columns: 1fr;
     }
 
-    #contact a {
-        margin-bottom: 16px;
+
+    .work-grid {
+        grid-template-columns: 1fr;
     }
+
+
+    .exploring-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    #contact h2 {
+        font-size: clamp(48px, 12vw, 75px);
+    }
+
+    .contact-links {
+        flex-wrap: wrap;
+
+        gap: 25px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nav-name {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -2px;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card {
+        min-height: auto;
+    }
+
 }

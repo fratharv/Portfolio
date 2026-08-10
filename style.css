@@ -375,8 +375,8 @@ MOBILE HERO
 
 
 /* =========================================
-   07 — WHAT I DO
-   ========================================= */
+07 — WHAT I DO
+========================================= */
 
 .interest-grid {
     display: grid;
@@ -384,7 +384,6 @@ MOBILE HERO
     grid-template-columns: repeat(3, 1fr);
 
     border-top: 1px solid #d8d0c3;
-
     border-left: 1px solid #d8d0c3;
 }
 
@@ -394,28 +393,31 @@ MOBILE HERO
     padding: 36px;
 
     border-right: 1px solid #d8d0c3;
-
     border-bottom: 1px solid #d8d0c3;
 }
 
 .interest-graphic {
     width: 100%;
-
     height: 150px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     margin-bottom: 35px;
 
     border-bottom: 1px solid #d8d0c3;
 
-    color: #756d62;
+    overflow: hidden;
+}
 
-    font-size: 64px;
+.interest-graphic img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
 .interest-number {
@@ -443,7 +445,6 @@ MOBILE HERO
 
     line-height: 1.7;
 }
-
 
 /* =========================================
    08 — SELECTED WORK

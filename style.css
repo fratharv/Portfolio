@@ -135,85 +135,76 @@ p {
 
 
 /* =========================================
-   04 — HERO
-   ========================================= */
+04 — HERO
+========================================= */
 
 #hero {
-    min-height: 100vh;
+    min-height: 85vh;
 
-    display: grid;
+    display: flex;
+    align-items: stretch;
 
-    grid-template-columns: 1.1fr 0.9fr;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    padding-right: 0;
 
-    align-items: center;
-
-    gap: 80px;
-
-    padding-top: 150px;
-
-    padding-bottom: 100px;
+    overflow: hidden;
 }
 
 .hero-content {
-    max-width: 900px;
-}
+    flex: 0 0 58%;
 
-.eyebrow {
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    color: #756d62;
-
-    font-size: 11px;
-
-    letter-spacing: 2.5px;
-}
-
-#hero h1 {
-    margin-bottom: 40px;
-
-    font-size: clamp(52px, 7vw, 110px);
-
-    line-height: 0.94;
-
-    letter-spacing: -4px;
-}
-
-.hero-description {
-    max-width: 580px;
-
-    margin-bottom: 0;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-}
-
-.hero-link {
-    display: inline-block;
-
-    margin-top: 32px;
-
-    color: #24221f;
-
-    text-decoration: none;
-
-    border-bottom: 1px solid #24221f;
-
-    padding-bottom: 6px;
-
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
+    padding-right: 6%;
 }
 
 .hero-image {
+    flex: 1;
+    min-height: 85vh;
+
+    overflow: hidden;
+}
+
+.hero-image img {
     width: 100%;
+    height: 100%;
 
-    min-height: 620px;
+    object-fit: cover;
+    object-position: center;
 
-    border: 1px solid #d8d0c3;
+    display: block;
+}
 
-    background-color: #ebe5da;
+#hero h1 {
+    max-width: 950px;
+
+    margin-bottom: 32px;
+
+    font-size: clamp(52px, 8vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+#hero .hero-content > p {
+    max-width: 600px;
+}
+
+#hero a {
+    display: inline-block;
+
+    margin-top: 28px;
+
+    color: #24221f;
+    text-decoration: none;
+
+    border-bottom: 1px solid #24221f;
+    padding-bottom: 5px;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
 }
 
 

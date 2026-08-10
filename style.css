@@ -213,54 +213,82 @@ p {
 }
 
 /* =========================================
-   MOBILE — HERO
+   MOBILE — HERO OVERRIDE
 ========================================= */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     #hero {
-        min-height: auto;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        width: 100% !important;
+        min-height: auto !important;
 
-        padding: 100px 5% 0;
+        padding: 100px 5% 0 !important;
+
+        position: relative !important;
     }
 
     .hero-content {
-        width: 100%;
-        order: 1;
+        display: block !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        order: 1 !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        position: relative !important;
     }
 
     #hero h1 {
-        font-size: clamp(48px, 14vw, 76px);
-        line-height: 0.9;
-        letter-spacing: -2px;
+        width: 100% !important;
+        max-width: none !important;
+
+        font-size: clamp(48px, 14vw, 76px) !important;
+        line-height: 0.9 !important;
+        letter-spacing: -2px !important;
     }
 
     .hero-description {
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .hero-image {
-        width: 100%;
-        height: auto;
+        display: block !important;
 
-        order: 2;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
 
-        margin-top: 55px;
+        order: 2 !important;
+
+        margin: 55px 0 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
     }
 
     .hero-image img {
-        width: 100%;
-        height: auto;
+        display: block !important;
 
-        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
 
-        object-fit: contain;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: contain !important;
+        object-position: center !important;
     }
-
 }
 
 /* =========================================

@@ -212,84 +212,6 @@ p {
     letter-spacing: 1.5px;
 }
 
-/* =========================================
-   MOBILE — HERO OVERRIDE
-========================================= */
-
-@media screen and (max-width: 768px) {
-
-    #hero {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: stretch !important;
-
-        width: 100% !important;
-        min-height: auto !important;
-
-        padding: 100px 5% 0 !important;
-
-        position: relative !important;
-    }
-
-    .hero-content {
-        display: block !important;
-
-        width: 100% !important;
-        max-width: none !important;
-
-        order: 1 !important;
-
-        padding: 0 !important;
-        margin: 0 !important;
-
-        position: relative !important;
-    }
-
-    #hero h1 {
-        width: 100% !important;
-        max-width: none !important;
-
-        font-size: clamp(48px, 14vw, 76px) !important;
-        line-height: 0.9 !important;
-        letter-spacing: -2px !important;
-    }
-
-    .hero-description {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .hero-image {
-        display: block !important;
-
-        width: 100% !important;
-        max-width: none !important;
-        height: auto !important;
-
-        order: 2 !important;
-
-        margin: 55px 0 0 !important;
-        padding: 0 !important;
-
-        position: relative !important;
-    }
-
-    .hero-image img {
-        display: block !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        object-fit: contain !important;
-        object-position: center !important;
-    }
-}
 
 /* =========================================
    05 — ABOUT
@@ -706,22 +628,32 @@ footer p {
 
     .nav-links a {
         font-size: 9px;
-
         letter-spacing: 1px;
     }
-
 
     section {
         padding: 100px 5%;
     }
 
+    /* MOBILE HERO */
 
     #hero {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
 
-        gap: 50px;
+        min-height: auto;
+
+        gap: 0;
 
         padding-top: 130px;
+        padding-bottom: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        flex: none;
+
+        padding-right: 0;
     }
 
     #hero h1 {
@@ -731,8 +663,27 @@ footer p {
     }
 
     .hero-image {
-        min-height: 450px;
+        width: 100%;
+        flex: none;
+
+        height: auto;
+        min-height: 0;
+
+        margin-top: 50px;
+
+        overflow: hidden;
     }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+
+        display: block;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
 
 
     .about-content {
